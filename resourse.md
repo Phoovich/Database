@@ -4,7 +4,7 @@ Here’s the updated markdown with the additional content seamlessly integrated:
 
 ## Slides
 
-[Open the PDF](./Slides/1. Overview.pdf)
+[1.\_Overview.pdf](./Slides/1._Overview.pdf)
 
 ## YouTube
 
