@@ -1,18 +1,27 @@
-Here’s the updated markdown with the additional content seamlessly integrated:
-
 # Resources for Preparation
 
 ## Slides
 
-[1.\_Overview.pdf](./Slides/1._Overview.pdf)
+1. [**Overview.pdf**](./Slides/1._Overview.pdf)<br>
+2. [**DatabaseDesign_ER.pdf**](./Slides/2._DatabaseDesign_ER.pdf)<br>
+3. [**Relation_Model.pdf**](./Slides/3._Relation_Model.pdf)<br>
+4. [**Normal_Forms**](./Slides/4._Normal_Forms.pdf)<br>
+5. [**Relational_Algebra.pdf**](./Slides/5._Relational_Algebra.pdf)
 
 ## YouTube
 
-(Add links or details here)
+- [**Overview**](https://www.youtube.com/watch?v=6DFerdcSnGY)<br><br>
+- [**DatabaseDesign_ER_1**](https://www.youtube.com/watch?v=iK0NcaXOcCw)<br>
+- [**DatabaseDesign_ER_2**](https://www.youtube.com/watch?v=FmuSwOcmtpI)<br>
+- [**DatabaseDesign_ER_3**](https://www.youtube.com/watch?v=TTn3IclysDA)<br><br>
+- [**Relation_Model**](https://www.youtube.com/watch?v=sbVNz8yLuQ8)<br><br>
+- [**Normal_Forms_1**](https://www.youtube.com/watch?v=1p_y42vHjuQ)<br>
+- [**Normal_Forms_2**](https://www.youtube.com/watch?v=JKdUwfgBWg8)<br><br>
+- [**Relational_Algebra**](https://www.youtube.com/watch?v=L4FpIyejTkI)
 
 ## Books
 
-- **Relational Database Design** (Add author or publication details here)
+- [**Relational Database Design**](./Proadpran_Pungabukkana_Relational_Database_Design_2560_npv3.pdf)
 
 ---
 
@@ -64,6 +73,130 @@ Here’s the updated markdown with the additional content seamlessly integrated:
 5. **Schema Refinement**:
    - Functional dependencies.
    - Normalization (1NF, 2NF, 3NF, and BCNF).
+
+---
+
+## Key Takeaways from the “Overview of Database Systems” Slides:
+
+1. **Key Concepts of Database Systems**:
+
+   - **Data**: Facts and statistics collected for reference or analysis.
+   - **Database**: An organized collection of related data stored electronically with entities and their relationships.
+   - **Database Management System (DBMS)**: Software designed to store, manage, and control access to databases.
+
+2. **Evolution and Types of DBMS**:
+
+   - **Historical Progression**:
+     - File-based systems → Hierarchical → Relational (1970s) → Object-Oriented → NoSQL (1990s) → NewSQL (2010s).
+   - **Modern Trends**: Relational DBMS is widely used, but NoSQL and NewSQL are gaining importance for big data and real-time applications.
+
+3. **Three-Schema Architecture**:
+
+   - **Internal Schema**: Describes physical storage and data structure.
+   - **Conceptual Schema**: Logical design of the database, focusing on structure and relationships.
+   - **External Schema**: Views for specific user groups, hiding irrelevant data.
+
+4. **Characteristics of DBMS**:
+
+   - Data consistency, integrity, security, and support for:
+     - **ACID Properties** (Atomicity, Consistency, Isolation, Durability).
+     - Query Languages like SQL.
+     - Multi-user and backup/recovery functionalities.
+
+5. **Relational Data Model**:
+
+   - Proposed by Edgar F. Codd in 1970.
+   - Uses relational algebra and relational calculus.
+   - SQL became the standard language for relational databases.
+
+6. **SQL and NoSQL**:
+
+   - **SQL (Structured Query Language)**:
+     - Standard for relational databases.
+     - Supports DDL (Data Definition), DML (Data Manipulation), DCL (Data Control), and TCL (Transaction Control).
+   - **NoSQL**:
+     - Non-relational, suitable for unstructured or semi-structured big data.
+     - Examples: Document-based, key-value, graph, and column-family databases.
+
+7. **CAP Theorem**:
+
+   - In distributed databases, you can only achieve two of the three:
+     - **Consistency**: Up-to-date information.
+     - **Availability**: Always accessible, even if data is outdated.
+     - **Partition Tolerance**: Operates during network partitioning.
+
+8. **Practical Applications**:
+   - **Relational Databases**: Best for structured data with well-defined relationships.
+   - **NoSQL Databases**: Ideal for unstructured data, real-time web apps, and big data solutions.
+
+---
+
+## Key Takeaways from the “Entity-Relationship (ER) Model” Slides:
+
+1. **Overview of the ER Model**:
+
+   - **Purpose**: High-level conceptual data modeling to represent real-world entities, their attributes, and relationships.
+   - **Components**:
+     - Entities: Objects/things represented in the database.
+     - Attributes: Properties describing entities.
+     - Relationships: Associations between entities.
+
+2. **Key Concepts**:
+
+   - **Entity Types**: Groupings of entities with the same attributes (e.g., EMPLOYEE, PROJECT).
+   - **Attributes**:
+     - Simple: Single atomic value (e.g., SSN).
+     - Composite: Multiple components (e.g., Address).
+     - Multi-valued: Multiple values for one attribute (e.g., Phone Numbers).
+     - Derived: Calculated from other attributes (e.g., Age from Birthdate).
+   - **Keys**:
+     - Unique identifiers for entities (e.g., SSN for EMPLOYEE).
+     - Composite keys combine multiple attributes.
+
+3. **Relationship Types**:
+
+   - **Binary Relationships**: Involving two entity types (e.g., EMPLOYEE “works on” PROJECT).
+   - **Ternary and Higher-Degree Relationships**: Involving three or more entity types.
+   - **Recursive Relationships**: Same entity participates in different roles (e.g., EMPLOYEE supervises another EMPLOYEE).
+   - **Cardinality**:
+     - One-to-one (1:1)
+     - One-to-many (1:N)
+     - Many-to-many (M:N)
+   - **Participation**:
+     - Total: Mandatory (all entities participate).
+     - Partial: Optional (some entities participate).
+
+4. **Weak Entities**:
+
+   - **Definition**: Entities that lack a unique key.
+   - **Identification**: Depend on a “strong” entity and a “partial key” (e.g., DEPENDENT identified by its EMPLOYEE).
+
+5. **Advanced Concepts**:
+
+   - **Specialization and Generalization**:
+     - Specialization: Dividing a superclass into subclasses based on unique characteristics (e.g., EMPLOYEE → ENGINEER, SECRETARY).
+     - Generalization: Combining subclasses into a superclass.
+   - **Constraints**:
+     - Disjoint: An entity belongs to one subclass.
+     - Overlapping: An entity can belong to multiple subclasses.
+     - Total: Every entity in the superclass is in a subclass.
+     - Partial: Some entities remain in the superclass only.
+   - **Inheritance**: Subclasses inherit attributes and relationships from the superclass.
+
+6. **ER Diagram Notations**:
+
+   - **Crow’s Foot Notation**: Popular graphical representation for cardinality and relationships.
+   - **Chen’s Notation**: Original style using shapes for entities, attributes, and relationships.
+
+7. **Constraints on Relationships**:
+
+   - **Structural Constraints**: Cardinality ratios and participation constraints.
+   - **Attributes in Relationships**: Properties specific to the relationship (e.g., hours worked by EMPLOYEE on a PROJECT).
+
+8. **Example Applications**:
+   - **COMPANY Database Schema**:
+     - Entities: EMPLOYEE, DEPARTMENT, PROJECT, DEPENDENT.
+     - Relationships: WORKS_FOR, MANAGES, WORKS_ON, CONTROLS.
 
 ---
 
