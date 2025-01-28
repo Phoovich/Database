@@ -2,7 +2,7 @@
 
 ## Slides
 
-1. [**Overview.pdf**](./Slides/1._Overview.pdf)<br>
+1. [**Overview.pdf**](../Sildes/1._Overview.pdf)<br>
 2. [**DatabaseDesign_ER.pdf**](./Slides/2._DatabaseDesign_ER.pdf)<br>
 3. [**Relation_Model.pdf**](./Slides/3._Relation_Model.pdf)<br>
 4. [**Normal_Forms**](./Slides/4._Normal_Forms.pdf)<br>
