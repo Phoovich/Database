@@ -1,0 +1,13 @@
+db.getCollection('customer').aggregate(
+  [
+    {
+      $group: {
+        _id: '$customer_zipcode',
+        customer_count: { $sum: 1 }
+      }
+    },
+    { $match: { customer_count: { $gt: 1 } } },
+    { $sort: { customer_count: -1, _id: 1 } }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
