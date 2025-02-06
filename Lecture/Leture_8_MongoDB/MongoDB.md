@@ -1,8 +1,22 @@
 # Mongosh CDM
 
+## ZSH Command
+
+- **`ps aux | grep mongod`** — > see port to use run mongod
+- **`sudo killall mongod`** —> ปิดทุกโปรเซสของ mongod
+- **`sudo kill -9 <PID>`** —>ปิดโปรเซสเฉพาะ แทน <PID> ด้วยเลข Process ID ที่ได้จาก ps aux
+- **`lsof -i :<PID>`** —> ตรวจสอบว่าโปรเซสไหนกำลังใช้พอร์ต
+- **`mongo --port <PID>`** —> รัน MongoDB บนพอร์ตอื่น
+
 ## Shell Command
 
 - `cls` → ล้างหน้าจอ
+- `.editor` -> open text buint in editor
+- `edit` -> command with an external editor.
+- `config.set("editor", "<text editor>")` --> set default editor
+- `EDITOR=<text editor> mongosh` --> use text editor onec time
+- `globalThis.config` --> see all config
+- `config.get("<config>")` -- > see specific config
 
 ## Database Commands
 
@@ -428,6 +442,7 @@ db.post.aggregate([
 |`id: "$owner"`| จัดกลุ่มตาม owner|
 |`$push: "Surl"` |เพิ่ม "Surl" เข้าไปในอาร์เรย์ urls ทุกครั้งที่พบโพสต์ของเจ้าของคนนั้น|
 |`$push: "$url"` |(ทางเลือกที่ถูกต้อง) ดึงค่า url ของแต่ละโพสต์เข้าอาร์เรย์ urls|
+
 ❌ `$push: "Surl"` → ไม่ได้ดึงค่า URL จริง ๆ แค่เพิ่ม "Surl" ซ้ำ ๆ
 
 ✅ `$push: "$url"` → ดึงค่า URL ของแต่ละโพสต์และเก็บลงในอาร์เรย์
